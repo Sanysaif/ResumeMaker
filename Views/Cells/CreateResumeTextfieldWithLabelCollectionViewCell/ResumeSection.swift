@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class ResumeSection {
     public let sectionTitle: String
     public let sectionLeftImage: String

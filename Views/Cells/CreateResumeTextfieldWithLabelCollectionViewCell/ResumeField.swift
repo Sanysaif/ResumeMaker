@@ -6,14 +6,24 @@
 //  Copyright © 2020 Saifur Rahman. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+public enum ResumeFieldType {
+    case text
+    case image
+}
 
 class ResumeField {
-    public let fieldTitle: String
-    public let placeholder: String
-    public let textfieldValue: String
+    public var id: String
+    public var fieldTitle: String
+    public var placeholder: String
+    public var textfieldValue: String
+    public var pickedImage: UIImage?
+    public var type: ResumeFieldType
     
-    init(fieldTitle: String, placeholder: String, textfieldValue: String) {
+    init(id: String, type: ResumeFieldType, fieldTitle: String, placeholder: String, textfieldValue: String) {
+        self.id = id
+        self.type = type
         self.fieldTitle = fieldTitle
         self.placeholder = placeholder
         self.textfieldValue = textfieldValue

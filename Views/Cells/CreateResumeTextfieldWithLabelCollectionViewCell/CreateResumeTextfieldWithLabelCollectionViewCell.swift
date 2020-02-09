@@ -14,15 +14,28 @@ class CreateResumeTextfieldWithLabelCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var uploadImageView: UIImageView!
+    
     
     var field : ResumeField? {
         didSet {
             guard let field = field else {
                 return
             }
+            switch field.type {
+            case .image:
+                self.uploadImageView.isHidden = false
+                self.textField.isHidden = true
+                if let image = field.pickedImage {
+                    self.uploadImageView.image = image
+                }
+            case .text:
+                self.uploadImageView.isHidden = true
+                self.textField.isHidden = false
+                self.textField.placeholder = field.placeholder
+                self.textField.text = field.textfieldValue
+            }
             self.titleLabel.text = field.fieldTitle
-            self.textField.placeholder = field.placeholder
-            self.textField.text = field.textfieldValue
         }
     }
     

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol UploadPhotoDelegate {
+    func uploadPhotoSignal(fieldId: String)
+}
+
 class CreateResumeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var containerView: UIView!
@@ -18,6 +22,7 @@ class CreateResumeTableViewCell: UITableViewCell {
     
     var resumeCollectionView: UICollectionView?
     private let xibName:String = "CreateResumeTableViewCell"
+    var delegate: UploadPhotoDelegate?
     
     var section: ResumeSection? {
         didSet {
@@ -95,6 +100,11 @@ extension CreateResumeTableViewCell: UICollectionViewDelegate, UICollectionViewD
         if collectionView == self.resumeCollectionView {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ridCreateResumeTextfieldWithLabel", for: indexPath) as! CreateResumeTextfieldWithLabelCollectionViewCell
             cell.field = self.section?.fields[indexPath.row]
+            cell.uploadImageView.tag = indexPath.row + 1
+            if let field = self.section?.fields[indexPath.row], field.type == .image {
+                cell.uploadImageView.isUserInteractionEnabled = true
+                cell.uploadImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(upload(_:))))
+            }
         }
         return cell
     }
@@ -109,5 +119,12 @@ extension CreateResumeTableViewCell: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+    
+    @objc func upload(_ sender: UITapGestureRecognizer) {
+        let view = sender.view
+        if let tag = view?.tag, let fieldId = section?.fields[tag - 1].id{
+            self.delegate?.uploadPhotoSignal(fieldId: fieldId)
+        }
     }
 }
