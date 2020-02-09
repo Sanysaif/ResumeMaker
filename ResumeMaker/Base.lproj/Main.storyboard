@@ -92,6 +92,62 @@
             </objects>
             <point key="canvasLocation" x="-851" y="-128"/>
         </scene>
+        <!--Create Resume View Controller-->
+        <scene sceneID="UMb-Yl-jgi">
+            <objects>
+                <viewController storyboardIdentifier="sbCreateResume" id="Un0-ke-lg7" customClass="CreateResumeViewController" customModule="ResumeMaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jnn-56-rzh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zup-VK-lLH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="763"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ridCreateResume" id="uFc-Xq-Xg1" customClass="CreateResumeTableViewCell" customModule="ResumeMaker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uFc-Xq-Xg1" id="Grh-cq-ar8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIg-Qm-AXA">
+                                <rect key="frame" x="0.0" y="807" width="414" height="89"/>
+                                <color key="backgroundColor" red="0.25948205590000001" green="0.77387577299999999" blue="0.48052871229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="FLr-1J-xL5"/>
+                                </constraints>
+                                <state key="normal" title="SAVE"/>
+                                <connections>
+                                    <action selector="saveAction:" destination="Un0-ke-lg7" eventType="touchUpInside" id="hUB-3c-h8i"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pIg-Qm-AXA" firstAttribute="top" secondItem="zup-VK-lLH" secondAttribute="bottom" id="9X5-8Y-2fa"/>
+                            <constraint firstItem="zup-VK-lLH" firstAttribute="leading" secondItem="UQN-RH-Wat" secondAttribute="leading" id="CZ8-Yu-kgA"/>
+                            <constraint firstItem="UQN-RH-Wat" firstAttribute="trailing" secondItem="pIg-Qm-AXA" secondAttribute="trailing" id="Fgd-Pe-o5I"/>
+                            <constraint firstItem="zup-VK-lLH" firstAttribute="top" secondItem="UQN-RH-Wat" secondAttribute="top" id="HH8-vk-dvc"/>
+                            <constraint firstAttribute="bottom" secondItem="pIg-Qm-AXA" secondAttribute="bottom" id="cDM-8r-X1P"/>
+                            <constraint firstItem="pIg-Qm-AXA" firstAttribute="leading" secondItem="UQN-RH-Wat" secondAttribute="leading" id="dQ9-lg-j9H"/>
+                            <constraint firstItem="UQN-RH-Wat" firstAttribute="trailing" secondItem="zup-VK-lLH" secondAttribute="trailing" id="v1t-dh-8pU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UQN-RH-Wat"/>
+                    </view>
+                    <connections>
+                        <outlet property="resumeTableView" destination="zup-VK-lLH" id="i9J-8g-998"/>
+                        <outlet property="saveButton" destination="pIg-Qm-AXA" id="GAx-HF-gI9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tYc-If-o20" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-852.17391304347836" y="576.5625"/>
+        </scene>
     </scenes>
     <resources>
         <image name="resume" width="128" height="128"/>

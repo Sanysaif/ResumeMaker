@@ -9,17 +9,21 @@
 import UIKit
 
 @objc protocol BarButtonItemAction: class {
-    @objc func settingsPressed()
+    @objc optional func settingsPressed()
+    @objc optional func addPhotoPressed()
+    
 }
 
 extension UIViewController {
     enum NavigationItemType: String {
-        case home = "ResumeMaker"
+        case home = "ResumeApp"
+        case createResume = "Create Resume"
     }
     
     fileprivate enum BarButtonType {
         case back
         case settings
+        case addPhoto
     }
     
     fileprivate func getBarButton(type: BarButtonType, delegate: BarButtonItemAction?) -> (UIBarButtonItem){
@@ -31,6 +35,11 @@ extension UIViewController {
         case .settings:
             let settings = UIBarButtonItem(image: #imageLiteral(resourceName: "cog"), style: .plain, target: self, action: #selector(delegate?.settingsPressed))
             return settings
+        case .addPhoto:
+            let addPhoto = UIBarButtonItem(image: #imageLiteral(resourceName: "add-photo"), style: .plain, target: self, action: #selector(delegate?.addPhotoPressed))
+            return addPhoto
+            
+        
         }
     }
     
@@ -40,6 +49,10 @@ extension UIViewController {
             navigationItem.title = type.rawValue
             navigationItem.rightBarButtonItem = getBarButton(type: .settings, delegate: delegate)
             navigationItem.leftBarButtonItem = nil
+        case .createResume:
+            navigationItem.title = type.rawValue
+            navigationItem.rightBarButtonItem = getBarButton(type: .addPhoto, delegate: delegate)
+            navigationItem.leftBarButtonItem = getBarButton(type: .back, delegate: delegate)
 
         }
     }

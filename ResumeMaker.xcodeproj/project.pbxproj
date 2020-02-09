@@ -3,10 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C880E3E737AE953337B29BF /* Pods_ResumeMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9937AD250CE2094C1F1D2781 /* Pods_ResumeMaker.framework */; };
+		B31A77AA77E3BB7EAF4DB21A /* Pods_ResumeMakerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553600132C279EFECF2FF86E /* Pods_ResumeMakerTests.framework */; };
+		D30F671B23EFFC2C008103DE /* ResumeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F671A23EFFC2C008103DE /* ResumeSection.swift */; };
+		D30F671D23F00108008103DE /* ResumeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30F671C23F00108008103DE /* ResumeField.swift */; };
+		D31B7C9A23EFE171007661E7 /* CreateResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31B7C9923EFE171007661E7 /* CreateResumeViewController.swift */; };
+		D31B7C9D23EFE842007661E7 /* CreateResumeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31B7C9C23EFE842007661E7 /* CreateResumeTableViewCell.swift */; };
+		D31B7C9F23EFE89A007661E7 /* CreateResumeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D31B7C9E23EFE89A007661E7 /* CreateResumeTableViewCell.xib */; };
 		D344063B23EFCAD600AE8163 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344063A23EFCAD600AE8163 /* Colours.swift */; };
 		D344063D23EFCB4100AE8163 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344063C23EFCB4100AE8163 /* Fonts.swift */; };
 		D344063F23EFCB7700AE8163 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344063E23EFCB7700AE8163 /* UIViewController+Extension.swift */; };
@@ -20,6 +27,8 @@
 		D3A7216723EF1EA00072624F /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7216623EF1EA00072624F /* BaseNavigationController.swift */; };
 		D3A7216923EF1EAE0072624F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7216823EF1EAE0072624F /* SplashViewController.swift */; };
 		D3A7216B23EFAE1B0072624F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7216A23EFAE1B0072624F /* HomeViewController.swift */; };
+		D3DD017123EFEB99005B70A4 /* CreateResumeTextfieldWithLabelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DD017023EFEB99005B70A4 /* CreateResumeTextfieldWithLabelCollectionViewCell.swift */; };
+		D3DD017323EFEBA1005B70A4 /* CreateResumeTextfieldWithLabelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3DD017223EFEBA1005B70A4 /* CreateResumeTextfieldWithLabelCollectionViewCell.xib */; };
 		D3E9F9B323EF16700024FDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E9F9B223EF16700024FDF1 /* AppDelegate.swift */; };
 		D3E9F9BA23EF16700024FDF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3E9F9B823EF16700024FDF1 /* Main.storyboard */; };
 		D3E9F9BC23EF16750024FDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3E9F9BB23EF16750024FDF1 /* Assets.xcassets */; };
@@ -38,6 +47,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		553600132C279EFECF2FF86E /* Pods_ResumeMakerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeMakerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6104A0A6060A0DACE2FC4285 /* Pods-ResumeMakerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeMakerTests.release.xcconfig"; path = "Target Support Files/Pods-ResumeMakerTests/Pods-ResumeMakerTests.release.xcconfig"; sourceTree = "<group>"; };
+		88DF78D593081FB6EA2522E3 /* Pods-ResumeMakerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeMakerTests.debug.xcconfig"; path = "Target Support Files/Pods-ResumeMakerTests/Pods-ResumeMakerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9937AD250CE2094C1F1D2781 /* Pods_ResumeMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResumeMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AFA5E2936773260DBA46974 /* Pods-ResumeMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeMaker.release.xcconfig"; path = "Target Support Files/Pods-ResumeMaker/Pods-ResumeMaker.release.xcconfig"; sourceTree = "<group>"; };
+		9F326B2A6F60921BD0AE7989 /* Pods-ResumeMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResumeMaker.debug.xcconfig"; path = "Target Support Files/Pods-ResumeMaker/Pods-ResumeMaker.debug.xcconfig"; sourceTree = "<group>"; };
+		D30F671A23EFFC2C008103DE /* ResumeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResumeSection.swift; path = Views/Cells/CreateResumeTextfieldWithLabelCollectionViewCell/ResumeSection.swift; sourceTree = SOURCE_ROOT; };
+		D30F671C23F00108008103DE /* ResumeField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResumeField.swift; path = Views/Cells/CreateResumeTextfieldWithLabelCollectionViewCell/ResumeField.swift; sourceTree = SOURCE_ROOT; };
+		D31B7C9923EFE171007661E7 /* CreateResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateResumeViewController.swift; sourceTree = "<group>"; };
+		D31B7C9C23EFE842007661E7 /* CreateResumeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateResumeTableViewCell.swift; sourceTree = "<group>"; };
+		D31B7C9E23EFE89A007661E7 /* CreateResumeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateResumeTableViewCell.xib; sourceTree = "<group>"; };
 		D344063A23EFCAD600AE8163 /* Colours.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
 		D344063C23EFCB4100AE8163 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		D344063E23EFCB7700AE8163 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -51,6 +71,8 @@
 		D3A7216623EF1EA00072624F /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		D3A7216823EF1EAE0072624F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		D3A7216A23EFAE1B0072624F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D3DD017023EFEB99005B70A4 /* CreateResumeTextfieldWithLabelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateResumeTextfieldWithLabelCollectionViewCell.swift; sourceTree = "<group>"; };
+		D3DD017223EFEBA1005B70A4 /* CreateResumeTextfieldWithLabelCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateResumeTextfieldWithLabelCollectionViewCell.xib; sourceTree = "<group>"; };
 		D3E9F9AF23EF16700024FDF1 /* ResumeMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResumeMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E9F9B223EF16700024FDF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3E9F9B923EF16700024FDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C880E3E737AE953337B29BF /* Pods_ResumeMaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,17 +97,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B31A77AA77E3BB7EAF4DB21A /* Pods_ResumeMakerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A98364A5F93D74A18F151AA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F326B2A6F60921BD0AE7989 /* Pods-ResumeMaker.debug.xcconfig */,
+				9AFA5E2936773260DBA46974 /* Pods-ResumeMaker.release.xcconfig */,
+				88DF78D593081FB6EA2522E3 /* Pods-ResumeMakerTests.debug.xcconfig */,
+				6104A0A6060A0DACE2FC4285 /* Pods-ResumeMakerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA5B56573361F5F23B41C6B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9937AD250CE2094C1F1D2781 /* Pods_ResumeMaker.framework */,
+				553600132C279EFECF2FF86E /* Pods_ResumeMakerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D31B7C9623EFDA02007661E7 /* RoundedWithShadowView */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = RoundedWithShadowView;
+			sourceTree = "<group>";
+		};
+		D31B7C9B23EFE81C007661E7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D3DD016F23EFEB73005B70A4 /* CreateResumeTextfieldWithLabelCollectionViewCell */,
+				D31B7CA023EFE89D007661E7 /* CreateResumeTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D31B7CA023EFE89D007661E7 /* CreateResumeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D31B7C9C23EFE842007661E7 /* CreateResumeTableViewCell.swift */,
+				D31B7C9E23EFE89A007661E7 /* CreateResumeTableViewCell.xib */,
+			);
+			path = CreateResumeTableViewCell;
 			sourceTree = "<group>";
 		};
 		D344064623EFD30B00AE8163 /* ImageHeadButton */ = {
@@ -99,6 +161,8 @@
 		D3A7215D23EF1DF20072624F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D30F671A23EFFC2C008103DE /* ResumeSection.swift */,
+				D30F671C23F00108008103DE /* ResumeField.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -129,6 +193,7 @@
 				D3A7216623EF1EA00072624F /* BaseNavigationController.swift */,
 				D3A7216823EF1EAE0072624F /* SplashViewController.swift */,
 				D3A7216A23EFAE1B0072624F /* HomeViewController.swift */,
+				D31B7C9923EFE171007661E7 /* CreateResumeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -136,23 +201,35 @@
 		D3A7216523EF1E800072624F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D31B7C9B23EFE81C007661E7 /* Cells */,
 				D31B7C9623EFDA02007661E7 /* RoundedWithShadowView */,
 				D344064623EFD30B00AE8163 /* ImageHeadButton */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D3DD016F23EFEB73005B70A4 /* CreateResumeTextfieldWithLabelCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D3DD017023EFEB99005B70A4 /* CreateResumeTextfieldWithLabelCollectionViewCell.swift */,
+				D3DD017223EFEBA1005B70A4 /* CreateResumeTextfieldWithLabelCollectionViewCell.xib */,
+			);
+			path = CreateResumeTextfieldWithLabelCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		D3E9F9A623EF16700024FDF1 = {
 			isa = PBXGroup;
 			children = (
-				D3A7216523EF1E800072624F /* Views */,
 				D3A7216323EF1E6D0072624F /* Controllers */,
-				D3A7216023EF1E1C0072624F /* Helpers */,
-				D3A7215E23EF1DFC0072624F /* Networking */,
+				D3A7216523EF1E800072624F /* Views */,
 				D3A7215D23EF1DF20072624F /* Models */,
+				D3A7215E23EF1DFC0072624F /* Networking */,
+				D3A7216023EF1E1C0072624F /* Helpers */,
 				D3E9F9B123EF16700024FDF1 /* ResumeMaker */,
 				D3E9F9C823EF16750024FDF1 /* ResumeMakerTests */,
 				D3E9F9B023EF16700024FDF1 /* Products */,
+				A98364A5F93D74A18F151AA1 /* Pods */,
+				CA5B56573361F5F23B41C6B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3E9F9CE23EF16750024FDF1 /* Build configuration list for PBXNativeTarget "ResumeMaker" */;
 			buildPhases = (
+				84BB7C07FE29504936E79F64 /* [CP] Check Pods Manifest.lock */,
 				D3E9F9AB23EF16700024FDF1 /* Sources */,
 				D3E9F9AC23EF16700024FDF1 /* Frameworks */,
 				D3E9F9AD23EF16700024FDF1 /* Resources */,
+				E3F1E3C7C4068E3FB2440747 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,6 +291,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3E9F9D123EF16750024FDF1 /* Build configuration list for PBXNativeTarget "ResumeMakerTests" */;
 			buildPhases = (
+				F12B1727B435F921938EBB49 /* [CP] Check Pods Manifest.lock */,
 				D3E9F9C123EF16750024FDF1 /* Sources */,
 				D3E9F9C223EF16750024FDF1 /* Frameworks */,
 				D3E9F9C323EF16750024FDF1 /* Resources */,
@@ -269,10 +349,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3DD017323EFEBA1005B70A4 /* CreateResumeTextfieldWithLabelCollectionViewCell.xib in Resources */,
 				D3E9F9BF23EF16750024FDF1 /* LaunchScreen.storyboard in Resources */,
 				D344064A23EFD3BA00AE8163 /* ImageHeadButton.xib in Resources */,
 				D3E9F9BC23EF16750024FDF1 /* Assets.xcassets in Resources */,
 				D3E9F9BA23EF16700024FDF1 /* Main.storyboard in Resources */,
+				D31B7C9F23EFE89A007661E7 /* CreateResumeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,19 +367,88 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		84BB7C07FE29504936E79F64 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ResumeMaker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3F1E3C7C4068E3FB2440747 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ResumeMaker/Pods-ResumeMaker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ResumeMaker/Pods-ResumeMaker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ResumeMaker/Pods-ResumeMaker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F12B1727B435F921938EBB49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ResumeMakerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D3E9F9AB23EF16700024FDF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D30F671B23EFFC2C008103DE /* ResumeSection.swift in Sources */,
 				D3A7216223EF1E350072624F /* NavigationHandler.swift in Sources */,
 				D344064823EFD34100AE8163 /* ImageHeadButton.swift in Sources */,
+				D3DD017123EFEB99005B70A4 /* CreateResumeTextfieldWithLabelCollectionViewCell.swift in Sources */,
 				D344064323EFCC9000AE8163 /* UIImage+LoadFromCurrentBundle.swift in Sources */,
+				D30F671D23F00108008103DE /* ResumeField.swift in Sources */,
 				D3A7215C23EF1C570072624F /* MainCoordinator.swift in Sources */,
 				D3E9F9B323EF16700024FDF1 /* AppDelegate.swift in Sources */,
 				D3A7216923EF1EAE0072624F /* SplashViewController.swift in Sources */,
 				D3A7216723EF1EA00072624F /* BaseNavigationController.swift in Sources */,
+				D31B7C9D23EFE842007661E7 /* CreateResumeTableViewCell.swift in Sources */,
 				D3A7216B23EFAE1B0072624F /* HomeViewController.swift in Sources */,
+				D31B7C9A23EFE171007661E7 /* CreateResumeViewController.swift in Sources */,
 				D3A7215B23EF1C570072624F /* Coordinator.swift in Sources */,
 				D344063D23EFCB4100AE8163 /* Fonts.swift in Sources */,
 				D344063F23EFCB7700AE8163 /* UIViewController+Extension.swift in Sources */,
@@ -460,6 +611,7 @@
 		};
 		D3E9F9CF23EF16750024FDF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F326B2A6F60921BD0AE7989 /* Pods-ResumeMaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -479,6 +631,7 @@
 		};
 		D3E9F9D023EF16750024FDF1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AFA5E2936773260DBA46974 /* Pods-ResumeMaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -498,6 +651,7 @@
 		};
 		D3E9F9D223EF16750024FDF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88DF78D593081FB6EA2522E3 /* Pods-ResumeMakerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -520,6 +674,7 @@
 		};
 		D3E9F9D323EF16750024FDF1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6104A0A6060A0DACE2FC4285 /* Pods-ResumeMakerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

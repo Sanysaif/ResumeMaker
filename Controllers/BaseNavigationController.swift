@@ -22,5 +22,4 @@ class BaseNavigationController: UINavigationController {
             navigationBar.scrollEdgeAppearance = navBarAppearance
         }
     }
-    
 }

@@ -10,14 +10,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    
     @IBOutlet weak var resumeButton: ImageHeadButton!
-    
     @IBOutlet weak var showAllButton: ImageHeadButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupUI()
     }
     
@@ -34,7 +31,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: ImageHeadButtonDelegate {
     func addResumeTapped(sender: ImageHeadButton) {
-        
+        NavigationHandler.pushCreateResume(navigationController: navigationController)
     }
     
     func showAllTapped(sender: ImageHeadButton) {
@@ -44,6 +41,6 @@ extension HomeViewController: ImageHeadButtonDelegate {
 
 extension HomeViewController: BarButtonItemAction {
     func settingsPressed() {
-//        NavigationHandlerHome.pushMenuVC(navigationController: navigationController, delegate: self, selectedMenu: .call)
+        
     }
 }

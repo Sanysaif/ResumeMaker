@@ -11,17 +11,12 @@ import UIKit
 class SplashViewController: UIViewController {
 
     weak var coordinator: MainCoordinator?
-
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.coordinator?.startHome()
         }
-        
     }
     
 }
