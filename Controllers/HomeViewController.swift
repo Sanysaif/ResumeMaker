@@ -10,21 +10,40 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    
+    @IBOutlet weak var resumeButton: ImageHeadButton!
+    
+    @IBOutlet weak var showAllButton: ImageHeadButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupUI() {
+        setNavigationItem(type: .home, delegate: self)
+        
+        resumeButton.type = .addResume
+        resumeButton.delegate = self
+        showAllButton.type = .showAll
+        showAllButton.delegate = self
     }
-    */
+    
+}
 
+extension HomeViewController: ImageHeadButtonDelegate {
+    func addResumeTapped(sender: ImageHeadButton) {
+        
+    }
+    
+    func showAllTapped(sender: ImageHeadButton) {
+        
+    }
+}
+
+extension HomeViewController: BarButtonItemAction {
+    func settingsPressed() {
+//        NavigationHandlerHome.pushMenuVC(navigationController: navigationController, delegate: self, selectedMenu: .call)
+    }
 }

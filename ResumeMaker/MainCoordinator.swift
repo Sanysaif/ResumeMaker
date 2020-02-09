@@ -11,25 +11,18 @@ import UIKit
 class MainCoordinator: Coordinator {
     private let window: UIWindow
     private var rootViewController: UINavigationController
-//    private let homeNavController: HomeNavController
-//    private let networkManager = NetworkManager()
-//    fileprivate var currentUser:CurrentUser?
     
     init(window: UIWindow) {
         self.window = window
         rootViewController = UINavigationController()
-//        homeNavController = Home.getHomeNavController()
-//
-//        rootViewController.pushViewController(Auth.getInitialViewController(), animated: true)
-//        Auth.delegate = self
         rootViewController.isNavigationBarHidden = true
+        let splash = NavigationHandler.getSplash()
+        splash.coordinator = self
+        rootViewController.pushViewController(splash, animated: true)
     }
     
-    func setupStart() {
-        rootViewController = UINavigationController()
-//        rootViewController.pushViewController(Auth.getInitialViewController(), animated: true)
-//        Auth.delegate = self
-        rootViewController.isNavigationBarHidden = true
+    func startHome() {
+        window.rootViewController = NavigationHandler.getHome()
     }
     
     func start(){

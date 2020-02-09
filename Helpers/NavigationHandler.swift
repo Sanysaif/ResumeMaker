@@ -20,12 +20,19 @@ class NavigationHandler {
         case home = "sbHome"
     }
     
-    public static func getInitialViewController() -> (UIViewController) {
+    public static func getSplash() -> (SplashViewController) {
         let storyBoard = UIStoryboard(name: StoryboardName.main.rawValue, bundle: Bundle(for: self))
         let splashVC = storyBoard.instantiateViewController(withIdentifier: StoryboardID.splash.rawValue) as! SplashViewController
         return splashVC
     }
     
+    public static func getHome() -> BaseNavigationController {
+        let storyBoard = UIStoryboard(name: StoryboardName.main.rawValue, bundle: Bundle(for: self))
+        let initialNav = storyBoard.instantiateViewController(withIdentifier: StoryboardID.initialNavigationController.rawValue) as! BaseNavigationController
+        let homeVC = storyBoard.instantiateViewController(withIdentifier: StoryboardID.home.rawValue) as! HomeViewController
+        initialNav.pushViewController(homeVC, animated: false)
+        return initialNav
+    }
 }
 
 

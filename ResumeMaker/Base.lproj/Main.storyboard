@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n2Y-bZ-buf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZaL-Ot-ptZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,9 +16,6 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="9po-H8-02a" kind="relationship" relationship="rootViewController" id="uaM-fA-hQK"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oOP-Es-9Hc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -31,10 +28,36 @@
                     <view key="view" contentMode="scaleToFill" id="RFk-ZI-vSa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JH-yX-o3r" customClass="ImageHeadButton" customModule="ResumeMaker" customModuleProvider="target">
+                                <rect key="frame" x="40" y="498" width="334" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="W9O-KV-hp9"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovY-1b-7a8" customClass="ImageHeadButton" customModule="ResumeMaker" customModuleProvider="target">
+                                <rect key="frame" x="40" y="318" width="334" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="epm-Rf-hd5"/>
+                                </constraints>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ovY-1b-7a8" firstAttribute="centerY" secondItem="EEw-Ic-91N" secondAttribute="centerY" constant="-90" id="4rt-kT-Uaa"/>
+                            <constraint firstItem="EEw-Ic-91N" firstAttribute="trailing" secondItem="2JH-yX-o3r" secondAttribute="trailing" constant="40" id="LhW-nR-UPj"/>
+                            <constraint firstItem="EEw-Ic-91N" firstAttribute="trailing" secondItem="ovY-1b-7a8" secondAttribute="trailing" constant="40" id="c6c-1s-1Uz"/>
+                            <constraint firstItem="ovY-1b-7a8" firstAttribute="leading" secondItem="EEw-Ic-91N" secondAttribute="leading" constant="40" id="cSY-Tn-7Q6"/>
+                            <constraint firstItem="2JH-yX-o3r" firstAttribute="centerY" secondItem="EEw-Ic-91N" secondAttribute="centerY" constant="90" id="fSr-O9-8A1"/>
+                            <constraint firstItem="2JH-yX-o3r" firstAttribute="leading" secondItem="EEw-Ic-91N" secondAttribute="leading" constant="40" id="yha-nt-x61"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="EEw-Ic-91N"/>
                     </view>
                     <navigationItem key="navigationItem" id="atj-k5-Yen"/>
+                    <connections>
+                        <outlet property="resumeButton" destination="ovY-1b-7a8" id="9zf-LV-jp0"/>
+                        <outlet property="showAllButton" destination="2JH-yX-o3r" id="gyQ-3A-dq5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAT-9j-XRk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,7 +70,20 @@
                     <view key="view" contentMode="scaleToFill" id="3yV-N1-57d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="resume" translatesAutoresizingMaskIntoConstraints="NO" id="lzD-E1-s8j">
+                                <rect key="frame" x="143" y="389" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="6te-6n-HeK"/>
+                                    <constraint firstAttribute="width" constant="128" id="PtJ-BZ-S1a"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lzD-E1-s8j" firstAttribute="centerX" secondItem="gnm-T3-wcp" secondAttribute="centerX" id="eWV-yc-33r"/>
+                            <constraint firstItem="lzD-E1-s8j" firstAttribute="centerY" secondItem="gnm-T3-wcp" secondAttribute="centerY" id="vgw-Z2-q6Q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gnm-T3-wcp"/>
                     </view>
                     <navigationItem key="navigationItem" id="lEu-XZ-xoS"/>
@@ -57,4 +93,7 @@
             <point key="canvasLocation" x="-851" y="-128"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="resume" width="128" height="128"/>
+    </resources>
 </document>
