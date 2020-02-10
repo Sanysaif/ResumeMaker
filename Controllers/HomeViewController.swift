@@ -35,7 +35,7 @@ extension HomeViewController: ImageHeadButtonDelegate {
     }
     
     func showAllTapped(sender: ImageHeadButton) {
-        
+        NavigationHandler.pushAllResumes(navigationController: navigationController)
     }
 }
 

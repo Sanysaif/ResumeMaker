@@ -16,20 +16,20 @@ class CreateResumeViewController: UIViewController {
     var selectedFieldIdForImage: String?
     
     let sections = [
-        ResumeSection(sectionTitle: "Photo & Signature", sectionLeftImage: "photo", sectionRightImage: "pen", expanded: true, fields: [ResumeField(id: "0001", type: .image, fieldTitle: "Upload Profile Photo(Tap on the Image)", placeholder: "Enter Profile Photo URL", textfieldValue: ""),
-            ResumeField(id: "0002", type: .image, fieldTitle: "Upload Signature(Tap on the Image)", placeholder: "Enter Signature URL", textfieldValue: "")]),
-        ResumeSection(sectionTitle: "Personal Info", sectionLeftImage: "profile", sectionRightImage: "pen", expanded: true, fields: [ResumeField(id: "0003", type: .text, fieldTitle: "Name", placeholder: "Enter Name", textfieldValue: ""),
-            ResumeField(id: "0004", type: .text, fieldTitle: "Fathers Name", placeholder: "Enter Fathers Name", textfieldValue: ""),
-            ResumeField(id: "0005", type: .text, fieldTitle: "Mothers Name", placeholder: "Enter Mothers Name", textfieldValue: ""),
-            ResumeField(id: "0006", type: .text, fieldTitle: "Date of Birth", placeholder: "dd/MM/yyyy", textfieldValue: "")]),
-        ResumeSection(sectionTitle: "Education", sectionLeftImage: "grad", sectionRightImage: "pen", expanded: true, fields: [ResumeField(id: "0007", type: .text, fieldTitle: "Course", placeholder: "Enter Course", textfieldValue: ""),
-            ResumeField(id: "0008", type: .text, fieldTitle: "Institute", placeholder: "Enter Institute", textfieldValue: ""),
-            ResumeField(id: "0009", type: .text, fieldTitle: "Passing Year", placeholder: "Enter Passing Year", textfieldValue: ""),
-            ResumeField(id: "0010", type: .text, fieldTitle: "CGPA/Percentage", placeholder: "Enter CGPA/Percentage", textfieldValue: "")]),
-        ResumeSection(sectionTitle: "Career Summary", sectionLeftImage: "briefcase", sectionRightImage: "pen", expanded: true, fields: [ResumeField(id: "0011", type: .text, fieldTitle: "Company Name", placeholder: "Enter Company Name", textfieldValue: ""),
-            ResumeField(id: "0012", type: .text, fieldTitle: "Company Address", placeholder: "Enter Company Address", textfieldValue: ""),
-            ResumeField(id: "0013", type: .text, fieldTitle: "Designation", placeholder: "Enter Designation", textfieldValue: ""),
-            ResumeField(id: "0014", type: .text, fieldTitle: "Starting time", placeholder: "Enter Starting time", textfieldValue: "")])]
+        ResumeSection(sectionTitle: "Photo & Signature", sectionLeftImage: "photo", sectionRightImage: "pen", expanded: true, fields: [ResumeField(id: "0001", type: .image, fieldTitle: "Upload Profile Photo(Tap on the Image)", textfieldValue: ""),
+            ResumeField(id: "0002", type: .image, fieldTitle: "Upload Signature(Tap on the Image)", textfieldValue: "")]),
+        ResumeSection(sectionTitle: "Personal Info", sectionLeftImage: "profile", sectionRightImage: "pen", expanded: false, fields: [ResumeField(id: "0003", type: .text, fieldTitle: "Name", textfieldValue: ""),
+            ResumeField(id: "0004", type: .text, fieldTitle: "Fathers Name", textfieldValue: ""),
+            ResumeField(id: "0005", type: .text, fieldTitle: "Mothers Name", textfieldValue: ""),
+            ResumeField(id: "0006", type: .text, fieldTitle: "Date of Birth", textfieldValue: "")]),
+        ResumeSection(sectionTitle: "Education", sectionLeftImage: "grad", sectionRightImage: "pen", expanded: false, fields: [ResumeField(id: "0007", type: .text, fieldTitle: "Course",  textfieldValue: ""),
+            ResumeField(id: "0008", type: .text, fieldTitle: "Institute", textfieldValue: ""),
+            ResumeField(id: "0009", type: .text, fieldTitle: "Passing Year", textfieldValue: ""),
+            ResumeField(id: "0010", type: .text, fieldTitle: "CGPA/Percentage",  textfieldValue: "")]),
+        ResumeSection(sectionTitle: "Career Summary", sectionLeftImage: "briefcase", sectionRightImage: "pen", expanded: false, fields: [ResumeField(id: "0011", type: .text, fieldTitle: "Company Name", textfieldValue: ""),
+            ResumeField(id: "0012", type: .text, fieldTitle: "Company Address", textfieldValue: ""),
+            ResumeField(id: "0013", type: .text, fieldTitle: "Designation", textfieldValue: ""),
+            ResumeField(id: "0014", type: .text, fieldTitle: "Starting time", textfieldValue: "")])]
     
     override func viewDidLoad() {
         super.viewDidLoad()

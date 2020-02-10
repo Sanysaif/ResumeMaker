@@ -32,7 +32,6 @@ class CreateResumeTextfieldWithLabelCollectionViewCell: UICollectionViewCell {
             case .text:
                 self.uploadImageView.isHidden = true
                 self.textField.isHidden = false
-                self.textField.placeholder = field.placeholder
                 self.textField.text = field.textfieldValue
             }
             self.titleLabel.text = field.fieldTitle

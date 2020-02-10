@@ -21,6 +21,16 @@
 		D344064523EFCE7500AE8163 /* UIViewController+NavigationItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344064423EFCE7500AE8163 /* UIViewController+NavigationItemType.swift */; };
 		D344064823EFD34100AE8163 /* ImageHeadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D344064723EFD34100AE8163 /* ImageHeadButton.swift */; };
 		D344064A23EFD3BA00AE8163 /* ImageHeadButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = D344064923EFD3BA00AE8163 /* ImageHeadButton.xib */; };
+		D380A67823F12C3C0056BC55 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380A67723F12C3C0056BC55 /* DBHelper.swift */; };
+		D380A67A23F135FC0056BC55 /* resume.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D380A67923F135FC0056BC55 /* resume.sqlite */; };
+		D380A67C23F1379F0056BC55 /* YourResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380A67B23F1379F0056BC55 /* YourResumeViewController.swift */; };
+		D380A67E23F13B850056BC55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380A67D23F13B850056BC55 /* Constants.swift */; };
+		D380A68023F177240056BC55 /* AllResumesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380A67F23F177240056BC55 /* AllResumesViewController.swift */; };
+		D380A68323F177B40056BC55 /* AllResumesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380A68223F177B40056BC55 /* AllResumesTableViewCell.swift */; };
+		D380A68523F177C10056BC55 /* AllResumesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D380A68423F177C10056BC55 /* AllResumesTableViewCell.xib */; };
+		D380A68723F180B60056BC55 /* DBParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380A68623F180B60056BC55 /* DBParser.swift */; };
+		D380A68923F181EA0056BC55 /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380A68823F181EA0056BC55 /* Resume.swift */; };
+		D380A68B23F183B60056BC55 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380A68A23F183B60056BC55 /* Section.swift */; };
 		D3A7215B23EF1C570072624F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7215923EF1C560072624F /* Coordinator.swift */; };
 		D3A7215C23EF1C570072624F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7215A23EF1C570072624F /* MainCoordinator.swift */; };
 		D3A7216223EF1E350072624F /* NavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7216123EF1E350072624F /* NavigationHandler.swift */; };
@@ -65,6 +75,16 @@
 		D344064423EFCE7500AE8163 /* UIViewController+NavigationItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationItemType.swift"; sourceTree = "<group>"; };
 		D344064723EFD34100AE8163 /* ImageHeadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHeadButton.swift; sourceTree = "<group>"; };
 		D344064923EFD3BA00AE8163 /* ImageHeadButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageHeadButton.xib; sourceTree = "<group>"; };
+		D380A67723F12C3C0056BC55 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		D380A67923F135FC0056BC55 /* resume.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = resume.sqlite; sourceTree = SOURCE_ROOT; };
+		D380A67B23F1379F0056BC55 /* YourResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourResumeViewController.swift; sourceTree = "<group>"; };
+		D380A67D23F13B850056BC55 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D380A67F23F177240056BC55 /* AllResumesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResumesViewController.swift; sourceTree = "<group>"; };
+		D380A68223F177B40056BC55 /* AllResumesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResumesTableViewCell.swift; sourceTree = "<group>"; };
+		D380A68423F177C10056BC55 /* AllResumesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllResumesTableViewCell.xib; sourceTree = "<group>"; };
+		D380A68623F180B60056BC55 /* DBParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBParser.swift; sourceTree = "<group>"; };
+		D380A68823F181EA0056BC55 /* Resume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Resume.swift; path = Helpers/Resume.swift; sourceTree = SOURCE_ROOT; };
+		D380A68A23F183B60056BC55 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Section.swift; path = Helpers/Section.swift; sourceTree = SOURCE_ROOT; };
 		D3A7215923EF1C560072624F /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		D3A7215A23EF1C570072624F /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		D3A7216123EF1E350072624F /* NavigationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHandler.swift; sourceTree = "<group>"; };
@@ -134,6 +154,7 @@
 		D31B7C9B23EFE81C007661E7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				D380A68123F177840056BC55 /* AllResumesTableViewCell */,
 				D3DD016F23EFEB73005B70A4 /* CreateResumeTextfieldWithLabelCollectionViewCell */,
 				D31B7CA023EFE89D007661E7 /* CreateResumeTableViewCell */,
 			);
@@ -158,11 +179,22 @@
 			path = ImageHeadButton;
 			sourceTree = "<group>";
 		};
+		D380A68123F177840056BC55 /* AllResumesTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D380A68223F177B40056BC55 /* AllResumesTableViewCell.swift */,
+				D380A68423F177C10056BC55 /* AllResumesTableViewCell.xib */,
+			);
+			path = AllResumesTableViewCell;
+			sourceTree = "<group>";
+		};
 		D3A7215D23EF1DF20072624F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				D30F671A23EFFC2C008103DE /* ResumeSection.swift */,
 				D30F671C23F00108008103DE /* ResumeField.swift */,
+				D380A68823F181EA0056BC55 /* Resume.swift */,
+				D380A68A23F183B60056BC55 /* Section.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,6 +215,9 @@
 				D344063E23EFCB7700AE8163 /* UIViewController+Extension.swift */,
 				D344064423EFCE7500AE8163 /* UIViewController+NavigationItemType.swift */,
 				D344064223EFCC9000AE8163 /* UIImage+LoadFromCurrentBundle.swift */,
+				D380A67723F12C3C0056BC55 /* DBHelper.swift */,
+				D380A67D23F13B850056BC55 /* Constants.swift */,
+				D380A68623F180B60056BC55 /* DBParser.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -194,6 +229,8 @@
 				D3A7216823EF1EAE0072624F /* SplashViewController.swift */,
 				D3A7216A23EFAE1B0072624F /* HomeViewController.swift */,
 				D31B7C9923EFE171007661E7 /* CreateResumeViewController.swift */,
+				D380A67B23F1379F0056BC55 /* YourResumeViewController.swift */,
+				D380A67F23F177240056BC55 /* AllResumesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -250,6 +287,7 @@
 				D3E9F9BB23EF16750024FDF1 /* Assets.xcassets */,
 				D3E9F9BD23EF16750024FDF1 /* LaunchScreen.storyboard */,
 				D3A7215923EF1C560072624F /* Coordinator.swift */,
+				D380A67923F135FC0056BC55 /* resume.sqlite */,
 				D3A7215A23EF1C570072624F /* MainCoordinator.swift */,
 				D3E9F9C023EF16750024FDF1 /* Info.plist */,
 			);
@@ -349,9 +387,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D380A67A23F135FC0056BC55 /* resume.sqlite in Resources */,
 				D3DD017323EFEBA1005B70A4 /* CreateResumeTextfieldWithLabelCollectionViewCell.xib in Resources */,
 				D3E9F9BF23EF16750024FDF1 /* LaunchScreen.storyboard in Resources */,
 				D344064A23EFD3BA00AE8163 /* ImageHeadButton.xib in Resources */,
+				D380A68523F177C10056BC55 /* AllResumesTableViewCell.xib in Resources */,
 				D3E9F9BC23EF16750024FDF1 /* Assets.xcassets in Resources */,
 				D3E9F9BA23EF16700024FDF1 /* Main.storyboard in Resources */,
 				D31B7C9F23EFE89A007661E7 /* CreateResumeTableViewCell.xib in Resources */,
@@ -438,19 +478,27 @@
 			files = (
 				D30F671B23EFFC2C008103DE /* ResumeSection.swift in Sources */,
 				D3A7216223EF1E350072624F /* NavigationHandler.swift in Sources */,
+				D380A68323F177B40056BC55 /* AllResumesTableViewCell.swift in Sources */,
 				D344064823EFD34100AE8163 /* ImageHeadButton.swift in Sources */,
 				D3DD017123EFEB99005B70A4 /* CreateResumeTextfieldWithLabelCollectionViewCell.swift in Sources */,
+				D380A67C23F1379F0056BC55 /* YourResumeViewController.swift in Sources */,
 				D344064323EFCC9000AE8163 /* UIImage+LoadFromCurrentBundle.swift in Sources */,
+				D380A68B23F183B60056BC55 /* Section.swift in Sources */,
 				D30F671D23F00108008103DE /* ResumeField.swift in Sources */,
 				D3A7215C23EF1C570072624F /* MainCoordinator.swift in Sources */,
 				D3E9F9B323EF16700024FDF1 /* AppDelegate.swift in Sources */,
 				D3A7216923EF1EAE0072624F /* SplashViewController.swift in Sources */,
+				D380A68923F181EA0056BC55 /* Resume.swift in Sources */,
 				D3A7216723EF1EA00072624F /* BaseNavigationController.swift in Sources */,
+				D380A68023F177240056BC55 /* AllResumesViewController.swift in Sources */,
+				D380A67E23F13B850056BC55 /* Constants.swift in Sources */,
 				D31B7C9D23EFE842007661E7 /* CreateResumeTableViewCell.swift in Sources */,
 				D3A7216B23EFAE1B0072624F /* HomeViewController.swift in Sources */,
 				D31B7C9A23EFE171007661E7 /* CreateResumeViewController.swift in Sources */,
 				D3A7215B23EF1C570072624F /* Coordinator.swift in Sources */,
+				D380A67823F12C3C0056BC55 /* DBHelper.swift in Sources */,
 				D344063D23EFCB4100AE8163 /* Fonts.swift in Sources */,
+				D380A68723F180B60056BC55 /* DBParser.swift in Sources */,
 				D344063F23EFCB7700AE8163 /* UIViewController+Extension.swift in Sources */,
 				D344064523EFCE7500AE8163 /* UIViewController+NavigationItemType.swift in Sources */,
 				D344063B23EFCAD600AE8163 /* Colours.swift in Sources */,

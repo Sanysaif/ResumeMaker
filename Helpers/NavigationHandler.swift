@@ -19,6 +19,7 @@ class NavigationHandler {
         case splash = "sbSplash"
         case home = "sbHome"
         case createResume = "sbCreateResume"
+        case allResumes = "sbAllResumes"
     }
     
     public static func getSplash() -> (SplashViewController) {
@@ -41,6 +42,13 @@ class NavigationHandler {
         let createVC = storyBoard.instantiateViewController(withIdentifier: StoryboardID.createResume.rawValue) as! CreateResumeViewController
         navigationController?.pushViewController(createVC, animated: true)
     }
+    
+    public static func pushAllResumes(navigationController: UINavigationController?) {
+        let storyBoard = UIStoryboard(name: StoryboardName.main.rawValue, bundle: Bundle(for: self))
+        let createVC = storyBoard.instantiateViewController(withIdentifier: StoryboardID.allResumes.rawValue) as! AllResumesViewController
+        navigationController?.pushViewController(createVC, animated: true)
+    }
+    
     
 }
 

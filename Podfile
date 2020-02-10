@@ -6,6 +6,7 @@ target 'ResumeMaker' do
   use_frameworks!
 
   pod 'SQLite.swift', '~> 0.12.0'
+  pod 'XLPagerTabStrip', '~> 9.0'
   pod 'IQKeyboardManagerSwift', '6.3.0'
   # Pods for ResumeMaker
 
