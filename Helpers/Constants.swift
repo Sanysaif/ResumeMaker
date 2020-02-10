@@ -24,6 +24,7 @@ struct K {
                 static let id = Expression<Int>("id")
                 static let photo = Expression<Blob>("Upload Profile Photo(Tap on the Image)")
                 static let sign = Expression<Blob>("Upload Signature(Tap on the Image)")
+                static let resume_id = Expression<Int>("resume_id")
             }
             struct personal {
                 static let id = Expression<Int>("id")
@@ -49,14 +50,8 @@ struct K {
                 static let start = Expression<String>("Starting time")
             }
             
-            struct users {
-                static let id = Expression<Int>("id")
-                static let name = Expression<String>("name")
-            }
-            
             struct resumes {
                 static let id = Expression<Int>("id")
-                static let uid = Expression<Int>("user_id")
             }
         }
     }

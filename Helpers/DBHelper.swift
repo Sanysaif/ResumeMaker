@@ -46,16 +46,33 @@ class DBHelper {
         }
     }
     
-    func getResumes() {
+    func getResumes() -> [Resume] {
         do {
             let resumes = try self.db.prepare(self.resumesTable)
-            parser.parseResumes(rows: resumes)
-            
+            return parser.parseResumes(rows: resumes)
         } catch {
-            
+            print(error)
+            return [Resume]()
         }
     }
     
-//    func insert(tableName: String, )
-
+    func getUsers() -> [Resume] {
+        do {
+            let users = try self.db.prepare(self.resumesTable)
+            return parser.parseResumes(rows: users)
+        } catch {
+            print(error)
+            return [Resume]()
+        }
+    }
+    
+    func getPhotos() -> [PhotoSignature] {
+        do {
+            let photos = try self.db.prepare(self.photoTable)
+            return parser.parsePhotos(rows: photos)
+        } catch {
+            print(error)
+            return [PhotoSignature]()
+        }
+    }
 }

@@ -10,10 +10,8 @@ import Foundation
 
 class Resume {
     public var id: Int
-    public var user_id: Int
     
-    init(id: Int, user_id: Int) {
+    init(id: Int) {
         self.id = id
-        self.user_id = user_id
     }
 }

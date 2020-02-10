@@ -31,6 +31,7 @@
 		D380A68723F180B60056BC55 /* DBParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380A68623F180B60056BC55 /* DBParser.swift */; };
 		D380A68923F181EA0056BC55 /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380A68823F181EA0056BC55 /* Resume.swift */; };
 		D380A68B23F183B60056BC55 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380A68A23F183B60056BC55 /* Section.swift */; };
+		D380A68F23F191AD0056BC55 /* PhotoSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380A68E23F191AD0056BC55 /* PhotoSignature.swift */; };
 		D3A7215B23EF1C570072624F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7215923EF1C560072624F /* Coordinator.swift */; };
 		D3A7215C23EF1C570072624F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7215A23EF1C570072624F /* MainCoordinator.swift */; };
 		D3A7216223EF1E350072624F /* NavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7216123EF1E350072624F /* NavigationHandler.swift */; };
@@ -85,6 +86,7 @@
 		D380A68623F180B60056BC55 /* DBParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBParser.swift; sourceTree = "<group>"; };
 		D380A68823F181EA0056BC55 /* Resume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Resume.swift; path = Helpers/Resume.swift; sourceTree = SOURCE_ROOT; };
 		D380A68A23F183B60056BC55 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Section.swift; path = Helpers/Section.swift; sourceTree = SOURCE_ROOT; };
+		D380A68E23F191AD0056BC55 /* PhotoSignature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoSignature.swift; path = Helpers/PhotoSignature.swift; sourceTree = SOURCE_ROOT; };
 		D3A7215923EF1C560072624F /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		D3A7215A23EF1C570072624F /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		D3A7216123EF1E350072624F /* NavigationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHandler.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				D30F671C23F00108008103DE /* ResumeField.swift */,
 				D380A68823F181EA0056BC55 /* Resume.swift */,
 				D380A68A23F183B60056BC55 /* Section.swift */,
+				D380A68E23F191AD0056BC55 /* PhotoSignature.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				D380A67E23F13B850056BC55 /* Constants.swift in Sources */,
 				D31B7C9D23EFE842007661E7 /* CreateResumeTableViewCell.swift in Sources */,
 				D3A7216B23EFAE1B0072624F /* HomeViewController.swift in Sources */,
+				D380A68F23F191AD0056BC55 /* PhotoSignature.swift in Sources */,
 				D31B7C9A23EFE171007661E7 /* CreateResumeViewController.swift in Sources */,
 				D3A7215B23EF1C570072624F /* Coordinator.swift in Sources */,
 				D380A67823F12C3C0056BC55 /* DBHelper.swift in Sources */,
