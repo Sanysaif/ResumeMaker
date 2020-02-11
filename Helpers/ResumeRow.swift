@@ -8,10 +8,12 @@
 
 import Foundation
 
-class Resume {
+class ResumeRow {
     public var id: Int
+    public var uid: Int
     
-    init(id: Int) {
+    init(id: Int, uid: Int) {
         self.id = id
+        self.uid = uid
     }
 }

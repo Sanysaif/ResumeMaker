@@ -9,7 +9,7 @@
 import Foundation
 import SQLite
 
-class PhotoSignature {
+class PhotosRow {
     public var id: Int
     public var profile_photo: Blob
     public var signature: Blob

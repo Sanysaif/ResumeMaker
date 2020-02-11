@@ -10,22 +10,35 @@ import UIKit
 import SQLite
 
 class DBParser {
-    func parseResumes(rows: AnySequence<Row>) -> [Resume]{
-        var resumes = [Resume]()
-        for row in rows {
-            resumes.append(Resume(id: row[K.DB.table.resumes.id]))
-        }
-        return resumes
+//    func parseResumeRows(rows: AnySequence<Row>) -> [ResumeRow]{
+//        var resumes = [ResumeRow]()
+//        for row in rows {
+//            resumes.append(ResumeRow(id: row[K.DB.table.resumes.id], uid: row[K.DB.table.resumes.user_id]))
+//        }
+//        return resumes
+//    }
+//    
+//    func parseUsersRows(rows: AnySequence<Row>) -> [UsersRow]{
+//        var users = [UsersRow]()
+//        for row in rows {
+//            users.append(UsersRow(id: row[K.DB.table.users.id], name: row[K.DB.table.users.name]))
+//        }
+//        return users
+//    }
+    
+    func parsePhoto(row: Row) -> PhotosRow {
+        return PhotosRow(id: row[K.DB.table.photo.id], profile_photo: row[K.DB.table.photo.photo], signature: row[K.DB.table.photo.sign], resume_id: row[K.DB.table.photo.resume_id])
     }
     
-    func parsePhotos(rows: AnySequence<Row>) -> [PhotoSignature]{
-        var photos = [PhotoSignature]()
-        for row in rows {
-            photos.append(PhotoSignature(id: row[K.DB.table.photo.id], profile_photo: row[K.DB.table.photo.photo], signature: row[K.DB.table.photo.sign], resume_id: row[K.DB.table.photo.resume_id]))
-        }
-        return photos
+    func parsePersonalInfo(row: Row) -> PersonalInfoRow {
+       return PersonalInfoRow(id: row[K.DB.table.personal.id], name: row[K.DB.table.personal.name], fathers_name: row[K.DB.table.personal.fName], mothers_name: row[K.DB.table.personal.mName], dob: row[K.DB.table.personal.dob], resume_id: row[K.DB.table.personal.resume_id])
     }
     
+    func parseCareerRow(row: Row) -> CareerRow {
+        return CareerRow(id: row[K.DB.table.career.id], company_name: row[K.DB.table.career.cName], company_address: row[K.DB.table.career.address], designation: row[K.DB.table.career.des], starting_time: row[K.DB.table.career.start], resume_id: row[K.DB.table.career.resume_id])
+    }
     
-    
+    func parseEducationRow(row: Row) -> EducationRow {
+        return EducationRow(id: row[K.DB.table.edu.id], course: row[K.DB.table.edu.course], institute: row[K.DB.table.edu.institute], passing_year: row[K.DB.table.edu.passYear], result: row[K.DB.table.edu.result], resume_id: row[K.DB.table.edu.resume_id])
+    }
 }
