@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SQLite
 
 class CreateResumeViewController: UIViewController {
     
@@ -14,19 +15,21 @@ class CreateResumeViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     
     var selectedFieldIdForImage: String?
+    let dbHelper = DBHelper()
+    let parser = DBParser()
     
-    let sections = [
-        ResumeSection(sectionTitle: "Photo & Signature", sectionLeftImage: "photo", sectionRightImage: "pen", expanded: true, fields: [ResumeField(id: "0001", type: .image, fieldTitle: "Upload Profile Photo(Tap on the Image)", textfieldValue: ""),
+    var sections = [
+        ResumeSection(sectionId: "0001", sectionTitle: "Photo & Signature", sectionLeftImage: "photo", sectionRightImage: "pen", expanded: true, fields: [ResumeField(id: "0001", type: .image, fieldTitle: "Upload Profile Photo(Tap on the Image)", textfieldValue: ""),
             ResumeField(id: "0002", type: .image, fieldTitle: "Upload Signature(Tap on the Image)", textfieldValue: "")]),
-        ResumeSection(sectionTitle: "Personal Info", sectionLeftImage: "profile", sectionRightImage: "pen", expanded: false, fields: [ResumeField(id: "0003", type: .text, fieldTitle: "Name", textfieldValue: ""),
+        ResumeSection(sectionId: "0002", sectionTitle: "Personal Info", sectionLeftImage: "profile", sectionRightImage: "pen", expanded: false, fields: [ResumeField(id: "0003", type: .text, fieldTitle: "Name", textfieldValue: ""),
             ResumeField(id: "0004", type: .text, fieldTitle: "Fathers Name", textfieldValue: ""),
             ResumeField(id: "0005", type: .text, fieldTitle: "Mothers Name", textfieldValue: ""),
             ResumeField(id: "0006", type: .text, fieldTitle: "Date of Birth", textfieldValue: "")]),
-        ResumeSection(sectionTitle: "Education", sectionLeftImage: "grad", sectionRightImage: "pen", expanded: false, fields: [ResumeField(id: "0007", type: .text, fieldTitle: "Course",  textfieldValue: ""),
+        ResumeSection(sectionId: "0003", sectionTitle: "Education", sectionLeftImage: "grad", sectionRightImage: "pen", expanded: false, fields: [ResumeField(id: "0007", type: .text, fieldTitle: "Course",  textfieldValue: ""),
             ResumeField(id: "0008", type: .text, fieldTitle: "Institute", textfieldValue: ""),
             ResumeField(id: "0009", type: .text, fieldTitle: "Passing Year", textfieldValue: ""),
             ResumeField(id: "0010", type: .text, fieldTitle: "CGPA/Percentage",  textfieldValue: "")]),
-        ResumeSection(sectionTitle: "Career Summary", sectionLeftImage: "briefcase", sectionRightImage: "pen", expanded: false, fields: [ResumeField(id: "0011", type: .text, fieldTitle: "Company Name", textfieldValue: ""),
+        ResumeSection(sectionId: "0004", sectionTitle: "Career Summary", sectionLeftImage: "briefcase", sectionRightImage: "pen", expanded: false, fields: [ResumeField(id: "0011", type: .text, fieldTitle: "Company Name", textfieldValue: ""),
             ResumeField(id: "0012", type: .text, fieldTitle: "Company Address", textfieldValue: ""),
             ResumeField(id: "0013", type: .text, fieldTitle: "Designation", textfieldValue: ""),
             ResumeField(id: "0014", type: .text, fieldTitle: "Starting time", textfieldValue: "")])]
@@ -52,7 +55,21 @@ class CreateResumeViewController: UIViewController {
     }
     
     @IBAction func saveAction(_ sender: Any) {
-        
+        view.endEditing(true)
+        let name = self.sections[1].fields[0].textfieldValue
+        if name.count > 0 {
+            let user = User(name: name)
+            if let user_id = dbHelper.insertUser(user: user) {
+                let resume = Resume(uid: user_id)
+                if let resume_id = dbHelper.insertResume(resume: resume) {
+                    // TO DO
+                }
+            } else {
+                self.showAlert(title: "Error", message: "Could not insert user", completionHandler: nil)
+            }
+        } else {
+            self.showAlert(title: "Empty name field", message: "You can't save a resume without a name", completionHandler: nil)
+        }
     }
     
 }
@@ -80,6 +97,7 @@ extension CreateResumeViewController: UITableViewDelegate, UITableViewDataSource
             cell.topContainerView.tag = indexPath.row + 1
             cell.topContainerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(expandCollapse(_:))))
             cell.delegate = self
+            cell.sectionDelegate = self
         }
         return cell
     }
@@ -135,6 +153,17 @@ extension CreateResumeViewController: UIImagePickerControllerDelegate, UINavigat
         } else{
             print("Something went wrong")
             self.dismiss(animated: true, completion: nil)
+        }
+    }
+}
+extension CreateResumeViewController: SectionValueChangedProtocol {
+    func sectionValueChanged(section: ResumeSection?) {
+        if let sentSection = section {
+            for idx in 0...self.sections.count - 1 {
+                if self.sections[idx].sectionId == sentSection.sectionId {
+                    self.sections[idx] = sentSection
+                }
+            }
         }
     }
 }

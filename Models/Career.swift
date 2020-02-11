@@ -1,5 +1,5 @@
 //
-//  CareerRow.swift
+//  Career.swift
 //  ResumeMaker
 //
 //  Created by Saifur Rahman on 2/11/20.
@@ -8,16 +8,14 @@
 
 import Foundation
 
-class CareerRow {
-    public var id: Int64
+class Career {
     public var company_name: String
     public var company_address: String
     public var designation: String
     public var starting_time: String
     public var resume_id: Int64
     
-    init(id: Int64, company_name: String, company_address: String, designation: String, starting_time: String, resume_id: Int64) {
-        self.id = id
+    init(company_name: String, company_address: String, designation: String, starting_time: String, resume_id: Int64) {
         self.company_name = company_name
         self.company_address = company_address
         self.designation = designation

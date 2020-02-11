@@ -9,10 +9,10 @@
 import Foundation
 
 class ResumeRow {
-    public var id: Int
-    public var uid: Int
+    public var id: Int64
+    public var uid: Int64
     
-    init(id: Int, uid: Int) {
+    init(id: Int64, uid: Int64) {
         self.id = id
         self.uid = uid
     }

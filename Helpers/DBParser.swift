@@ -10,21 +10,6 @@ import UIKit
 import SQLite
 
 class DBParser {
-//    func parseResumeRows(rows: AnySequence<Row>) -> [ResumeRow]{
-//        var resumes = [ResumeRow]()
-//        for row in rows {
-//            resumes.append(ResumeRow(id: row[K.DB.table.resumes.id], uid: row[K.DB.table.resumes.user_id]))
-//        }
-//        return resumes
-//    }
-//    
-//    func parseUsersRows(rows: AnySequence<Row>) -> [UsersRow]{
-//        var users = [UsersRow]()
-//        for row in rows {
-//            users.append(UsersRow(id: row[K.DB.table.users.id], name: row[K.DB.table.users.name]))
-//        }
-//        return users
-//    }
     
     func parsePhoto(row: Row) -> PhotosRow {
         return PhotosRow(id: row[K.DB.table.photo.id], profile_photo: row[K.DB.table.photo.photo], signature: row[K.DB.table.photo.sign], resume_id: row[K.DB.table.photo.resume_id])

@@ -1,5 +1,5 @@
 //
-//  EducationRow.swift
+//  Education.swift
 //  ResumeMaker
 //
 //  Created by Saifur Rahman on 2/11/20.
@@ -8,16 +8,14 @@
 
 import Foundation
 
-class EducationRow {
-    public var id: Int64
+class Education {
     public var course: String
     public var institute: String
     public var passing_year: String
     public var result: String
     public var resume_id: Int64
     
-    init(id: Int64, course: String, institute: String, passing_year: String, result: String, resume_id: Int64) {
-        self.id = id
+    init(course: String, institute: String, passing_year: String, result: String, resume_id: Int64) {
         self.course = course
         self.institute = institute
         self.passing_year = passing_year

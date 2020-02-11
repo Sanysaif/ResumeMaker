@@ -15,7 +15,7 @@ class AllResumesViewController: UIViewController {
     @IBOutlet weak var allResumesTableView: UITableView!
     
     let dbHelper = DBHelper()
-    var resumes = [Resume]()
+    var resumes = [ResumeModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +50,6 @@ extension AllResumesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        NavigationHandler.pushYourResumes(navigationController: navigationController)
     }
 }

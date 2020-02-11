@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SendFieldValueProtocol {
+    func sendFieldValue(_ field: ResumeField?)
+}
+
 class CreateResumeTextfieldWithLabelCollectionViewCell: UICollectionViewCell {
     
     private let xibName:String = "CreateResumeTextfieldWithLabelCollectionViewCell"
@@ -16,10 +20,11 @@ class CreateResumeTextfieldWithLabelCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var uploadImageView: UIImageView!
     
+    var delegate: SendFieldValueProtocol?
     
     var field : ResumeField? {
-        didSet {
-            guard let field = field else {
+        willSet {
+            guard let field = newValue else {
                 return
             }
             switch field.type {
@@ -61,6 +66,13 @@ class CreateResumeTextfieldWithLabelCollectionViewCell: UICollectionViewCell {
                 xibView.layer.cornerRadius = 8.0
                 clipsToBounds = true
             }
+        }
+    }
+    
+    @IBAction func textfieldDidChange(_ sender: UITextField) {
+        if let text = sender.text {
+            self.field?.textfieldValue = text
+            self.delegate?.sendFieldValue(self.field)
         }
     }
 }

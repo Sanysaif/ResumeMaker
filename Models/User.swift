@@ -1,5 +1,5 @@
 //
-//  UsersRow.swift
+//  User.swift
 //  ResumeMaker
 //
 //  Created by Saifur Rahman on 2/11/20.
@@ -8,12 +8,10 @@
 
 import Foundation
 
-class UsersRow {
-    public var id: Int64
+class User {
     public var name: String
     
-    init(id: Int64, name: String) {
-        self.id = id
+    init(name: String) {
         self.name = name
     }
 }

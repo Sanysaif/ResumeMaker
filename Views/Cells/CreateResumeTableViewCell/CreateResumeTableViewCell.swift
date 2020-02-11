@@ -12,6 +12,10 @@ protocol UploadPhotoDelegate {
     func uploadPhotoSignal(fieldId: String)
 }
 
+protocol SectionValueChangedProtocol {
+    func sectionValueChanged(section: ResumeSection?)
+}
+
 class CreateResumeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var containerView: UIView!
@@ -23,6 +27,7 @@ class CreateResumeTableViewCell: UITableViewCell {
     var resumeCollectionView: UICollectionView?
     private let xibName:String = "CreateResumeTableViewCell"
     var delegate: UploadPhotoDelegate?
+    var sectionDelegate: SectionValueChangedProtocol?
     
     var section: ResumeSection? {
         didSet {
@@ -100,6 +105,7 @@ extension CreateResumeTableViewCell: UICollectionViewDelegate, UICollectionViewD
         if collectionView == self.resumeCollectionView {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ridCreateResumeTextfieldWithLabel", for: indexPath) as! CreateResumeTextfieldWithLabelCollectionViewCell
             cell.field = self.section?.fields[indexPath.row]
+            cell.delegate = self
             cell.uploadImageView.tag = indexPath.row + 1
             if let field = self.section?.fields[indexPath.row], field.type == .image {
                 cell.uploadImageView.isUserInteractionEnabled = true
@@ -125,6 +131,18 @@ extension CreateResumeTableViewCell: UICollectionViewDelegate, UICollectionViewD
         let view = sender.view
         if let tag = view?.tag, let fieldId = section?.fields[tag - 1].id{
             self.delegate?.uploadPhotoSignal(fieldId: fieldId)
+        }
+    }
+}
+extension CreateResumeTableViewCell: SendFieldValueProtocol {
+    func sendFieldValue(_ field: ResumeField?) {
+        if let sentField = field, let count = self.section?.fields.count {
+            for idx in 0...count - 1 {
+                if self.section?.fields[idx].id == sentField.id {
+                    self.section?.fields[idx] = sentField
+                    self.sectionDelegate?.sectionValueChanged(section: self.section)
+                }
+            }
         }
     }
 }

@@ -24,7 +24,7 @@
 		D349470923F2720B00DFFEFC /* CareerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D349470823F2720B00DFFEFC /* CareerRow.swift */; };
 		D349470B23F272FF00DFFEFC /* EducationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D349470A23F272FF00DFFEFC /* EducationRow.swift */; };
 		D349470D23F2743A00DFFEFC /* UsersRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D349470C23F2743A00DFFEFC /* UsersRow.swift */; };
-		D349470F23F274F400DFFEFC /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = D349470E23F274F400DFFEFC /* Resume.swift */; };
+		D349470F23F274F400DFFEFC /* ResumeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D349470E23F274F400DFFEFC /* ResumeModel.swift */; };
 		D35471FE23F2684E0062B853 /* resume.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = D35471FD23F2684E0062B853 /* resume.sqlite3 */; };
 		D354720023F2702F0062B853 /* PersonalInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35471FF23F2702F0062B853 /* PersonalInfoRow.swift */; };
 		D380A67823F12C3C0056BC55 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380A67723F12C3C0056BC55 /* DBHelper.swift */; };
@@ -36,6 +36,12 @@
 		D380A68723F180B60056BC55 /* DBParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380A68623F180B60056BC55 /* DBParser.swift */; };
 		D380A68923F181EA0056BC55 /* ResumeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380A68823F181EA0056BC55 /* ResumeRow.swift */; };
 		D380A68F23F191AD0056BC55 /* PhotosRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D380A68E23F191AD0056BC55 /* PhotosRow.swift */; };
+		D394D54323F306C000F952F5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D394D54223F306C000F952F5 /* User.swift */; };
+		D394D54523F3160500F952F5 /* PersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D394D54423F3160500F952F5 /* PersonalInfo.swift */; };
+		D394D54723F3161100F952F5 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = D394D54623F3161100F952F5 /* Photos.swift */; };
+		D394D54923F3161700F952F5 /* Career.swift in Sources */ = {isa = PBXBuildFile; fileRef = D394D54823F3161700F952F5 /* Career.swift */; };
+		D394D54B23F3162100F952F5 /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = D394D54A23F3162100F952F5 /* Education.swift */; };
+		D394D54D23F316E400F952F5 /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = D394D54C23F316E400F952F5 /* Resume.swift */; };
 		D3A7215B23EF1C570072624F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7215923EF1C560072624F /* Coordinator.swift */; };
 		D3A7215C23EF1C570072624F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7215A23EF1C570072624F /* MainCoordinator.swift */; };
 		D3A7216223EF1E350072624F /* NavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7216123EF1E350072624F /* NavigationHandler.swift */; };
@@ -83,7 +89,7 @@
 		D349470823F2720B00DFFEFC /* CareerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerRow.swift; sourceTree = "<group>"; };
 		D349470A23F272FF00DFFEFC /* EducationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationRow.swift; sourceTree = "<group>"; };
 		D349470C23F2743A00DFFEFC /* UsersRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRow.swift; sourceTree = "<group>"; };
-		D349470E23F274F400DFFEFC /* Resume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resume.swift; sourceTree = "<group>"; };
+		D349470E23F274F400DFFEFC /* ResumeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeModel.swift; sourceTree = "<group>"; };
 		D35471FD23F2684E0062B853 /* resume.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = resume.sqlite3; sourceTree = SOURCE_ROOT; };
 		D35471FF23F2702F0062B853 /* PersonalInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoRow.swift; sourceTree = "<group>"; };
 		D380A67723F12C3C0056BC55 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
@@ -95,6 +101,12 @@
 		D380A68623F180B60056BC55 /* DBParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBParser.swift; sourceTree = "<group>"; };
 		D380A68823F181EA0056BC55 /* ResumeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResumeRow.swift; path = Helpers/ResumeRow.swift; sourceTree = SOURCE_ROOT; };
 		D380A68E23F191AD0056BC55 /* PhotosRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotosRow.swift; path = Helpers/PhotosRow.swift; sourceTree = SOURCE_ROOT; };
+		D394D54223F306C000F952F5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D394D54423F3160500F952F5 /* PersonalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfo.swift; sourceTree = "<group>"; };
+		D394D54623F3161100F952F5 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		D394D54823F3161700F952F5 /* Career.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Career.swift; sourceTree = "<group>"; };
+		D394D54A23F3162100F952F5 /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
+		D394D54C23F316E400F952F5 /* Resume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resume.swift; sourceTree = "<group>"; };
 		D3A7215923EF1C560072624F /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		D3A7215A23EF1C570072624F /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		D3A7216123EF1E350072624F /* NavigationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHandler.swift; sourceTree = "<group>"; };
@@ -209,7 +221,13 @@
 				D349470823F2720B00DFFEFC /* CareerRow.swift */,
 				D349470A23F272FF00DFFEFC /* EducationRow.swift */,
 				D349470C23F2743A00DFFEFC /* UsersRow.swift */,
-				D349470E23F274F400DFFEFC /* Resume.swift */,
+				D349470E23F274F400DFFEFC /* ResumeModel.swift */,
+				D394D54223F306C000F952F5 /* User.swift */,
+				D394D54423F3160500F952F5 /* PersonalInfo.swift */,
+				D394D54623F3161100F952F5 /* Photos.swift */,
+				D394D54823F3161700F952F5 /* Career.swift */,
+				D394D54A23F3162100F952F5 /* Education.swift */,
+				D394D54C23F316E400F952F5 /* Resume.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -495,6 +513,7 @@
 				D3A7216223EF1E350072624F /* NavigationHandler.swift in Sources */,
 				D380A68323F177B40056BC55 /* AllResumesTableViewCell.swift in Sources */,
 				D354720023F2702F0062B853 /* PersonalInfoRow.swift in Sources */,
+				D394D54323F306C000F952F5 /* User.swift in Sources */,
 				D344064823EFD34100AE8163 /* ImageHeadButton.swift in Sources */,
 				D3DD017123EFEB99005B70A4 /* CreateResumeTextfieldWithLabelCollectionViewCell.swift in Sources */,
 				D380A67C23F1379F0056BC55 /* YourResumeViewController.swift in Sources */,
@@ -502,20 +521,25 @@
 				D30F671D23F00108008103DE /* ResumeField.swift in Sources */,
 				D3A7215C23EF1C570072624F /* MainCoordinator.swift in Sources */,
 				D3E9F9B323EF16700024FDF1 /* AppDelegate.swift in Sources */,
+				D394D54723F3161100F952F5 /* Photos.swift in Sources */,
 				D3A7216923EF1EAE0072624F /* SplashViewController.swift in Sources */,
 				D380A68923F181EA0056BC55 /* ResumeRow.swift in Sources */,
 				D3A7216723EF1EA00072624F /* BaseNavigationController.swift in Sources */,
 				D380A68023F177240056BC55 /* AllResumesViewController.swift in Sources */,
 				D380A67E23F13B850056BC55 /* Constants.swift in Sources */,
 				D31B7C9D23EFE842007661E7 /* CreateResumeTableViewCell.swift in Sources */,
-				D349470F23F274F400DFFEFC /* Resume.swift in Sources */,
+				D349470F23F274F400DFFEFC /* ResumeModel.swift in Sources */,
 				D3A7216B23EFAE1B0072624F /* HomeViewController.swift in Sources */,
 				D380A68F23F191AD0056BC55 /* PhotosRow.swift in Sources */,
 				D31B7C9A23EFE171007661E7 /* CreateResumeViewController.swift in Sources */,
 				D349470923F2720B00DFFEFC /* CareerRow.swift in Sources */,
+				D394D54D23F316E400F952F5 /* Resume.swift in Sources */,
+				D394D54923F3161700F952F5 /* Career.swift in Sources */,
 				D3A7215B23EF1C570072624F /* Coordinator.swift in Sources */,
+				D394D54B23F3162100F952F5 /* Education.swift in Sources */,
 				D349470B23F272FF00DFFEFC /* EducationRow.swift in Sources */,
 				D380A67823F12C3C0056BC55 /* DBHelper.swift in Sources */,
+				D394D54523F3160500F952F5 /* PersonalInfo.swift in Sources */,
 				D344063D23EFCB4100AE8163 /* Fonts.swift in Sources */,
 				D380A68723F180B60056BC55 /* DBParser.swift in Sources */,
 				D344063F23EFCB7700AE8163 /* UIViewController+Extension.swift in Sources */,
